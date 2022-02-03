@@ -1,0 +1,22 @@
+<h1>Web application example</h1>
+<h3>List of people:</h3>
+<button onclick='document.getElementById("table").style.visibility = "visible";'>Press me!</button>
+<hr />
+<tbody>
+  <table class='table table-striped' id="table" aria-labelledby="tableLabel" style="visibility: hidden;" *ngIf="people">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Id</th>
+        <th>Phone number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of people">
+        <td>{{ i.name }}</td>
+        <td>{{ i.id }}</td>
+        <td>{{ i.phoneNumber }}</td>
+      </tr>
+    </tbody>
+  </table>
+</tbody>
